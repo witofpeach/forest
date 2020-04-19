@@ -5,8 +5,7 @@ import org.witofpeach.forest.command.CommandContext;
 import org.witofpeach.forest.command.ICommand;
 
 public class PingCommand implements ICommand {
-
-
+    private String name = "ping";
 
     @Override
     public void handle(CommandContext commandContext) {
@@ -20,6 +19,11 @@ public class PingCommand implements ICommand {
 
     @Override
     public String getName() {
-        return "ping";
+        return this.name;
+    }
+
+    @Override
+    public String getHelp() {
+        return "Shows the current ping from the bot to the discord servers";
     }
 }

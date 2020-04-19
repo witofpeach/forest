@@ -3,6 +3,8 @@ package org.witofpeach.forest;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import org.witofpeach.forest.command.CommandContext;
 import org.witofpeach.forest.command.ICommand;
+import org.witofpeach.forest.command.commands.HelpCommand;
+import org.witofpeach.forest.command.commands.KickCommand;
 import org.witofpeach.forest.command.commands.PingCommand;
 
 import javax.annotation.Nullable;
@@ -17,6 +19,8 @@ public class CommandManager {
 
     public CommandManager() {
         addCommand(new PingCommand());
+        addCommand(new HelpCommand(this));
+        addCommand(new KickCommand());
     }
 
     private void addCommand(ICommand command) {
@@ -29,8 +33,12 @@ public class CommandManager {
         commands.add(command);
     }
 
+    public List<ICommand> getAllCommands() {
+        return this.commands;
+    }
+
     @Nullable
-    private ICommand getCommand(String name) {
+    public ICommand getCommand(String name) {
         String nameLower = name.toLowerCase();
 
         for (ICommand command : this.commands) {
