@@ -50,15 +50,20 @@ public class CommandManager {
         String invoke = split[0].toLowerCase();
         ICommand command = this.getCommand(invoke);
 
+        event.getChannel().sendTyping().queue();
+
+        List<String> args = Arrays.asList(split).subList(1, split.length);
+
+        CommandContext commandContext = new CommandContext(event, args);
+
         if (command != null) {
-            event.getChannel().sendTyping().queue();
-
-            List<String> args = Arrays.asList(split).subList(1, split.length);
-
-
-            CommandContext commandContext = new CommandContext(event, args);
-
             command.handle(commandContext);
+        } else {
+            commandContext.getChannel()
+                    .sendMessageFormat("Command !!%s not found!", invoke).queue();
         }
     }
+
 }
+
+
