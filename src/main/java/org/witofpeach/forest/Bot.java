@@ -15,7 +15,7 @@ public class Bot {
 
         EmbedUtils.setEmbedBuilder(
                 () -> new EmbedBuilder()
-                .setColor(0x27bb08)
+                .setColor(0x146a08)
                 .setFooter("forest")
         );
 

@@ -21,6 +21,7 @@ public class CommandManager {
         addCommand(new KickCommand());
         addCommand(new MemeCommand());
         addCommand(new WebhookCommand());
+        addCommand(new JokeCommand());
     }
 
     private void addCommand(ICommand command) {
