@@ -3,10 +3,7 @@ package org.witofpeach.forest;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import org.witofpeach.forest.command.CommandContext;
 import org.witofpeach.forest.command.ICommand;
-import org.witofpeach.forest.command.commands.HelpCommand;
-import org.witofpeach.forest.command.commands.KickCommand;
-import org.witofpeach.forest.command.commands.MemeCommand;
-import org.witofpeach.forest.command.commands.PingCommand;
+import org.witofpeach.forest.command.commands.*;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -23,6 +20,7 @@ public class CommandManager {
         addCommand(new HelpCommand(this));
         addCommand(new KickCommand());
         addCommand(new MemeCommand());
+        addCommand(new WebhookCommand());
     }
 
     private void addCommand(ICommand command) {

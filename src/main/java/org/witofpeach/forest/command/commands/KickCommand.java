@@ -61,6 +61,6 @@ public class KickCommand implements ICommand {
     @Override
     public String getHelp() {
         return "Kick a member off the server.\n" +
-                "Usage: `!!kick <@user> <reason>`";
+                "Usage: `!!kick <@user> [reason]`";
     }
 }

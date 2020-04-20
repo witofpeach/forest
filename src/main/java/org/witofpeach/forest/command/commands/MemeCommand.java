@@ -49,6 +49,7 @@ public class MemeCommand implements ICommand {
 
     @Override
     public String getHelp() {
-        return "Shows a funny meme)";
+        return "Shows funny memes\n" +
+                "Usage: `!!meme <amount>`";
     }
 }
