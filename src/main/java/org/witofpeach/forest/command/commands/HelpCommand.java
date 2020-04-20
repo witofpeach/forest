@@ -10,7 +10,7 @@ import java.util.List;
 
 public class HelpCommand implements ICommand {
     private final CommandManager manager;
-    private String name = "help";
+    private final String name = "help";
 
     public HelpCommand(CommandManager manager) {
         this.manager = manager;

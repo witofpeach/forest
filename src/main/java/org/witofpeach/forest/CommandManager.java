@@ -5,6 +5,7 @@ import org.witofpeach.forest.command.CommandContext;
 import org.witofpeach.forest.command.ICommand;
 import org.witofpeach.forest.command.commands.HelpCommand;
 import org.witofpeach.forest.command.commands.KickCommand;
+import org.witofpeach.forest.command.commands.MemeCommand;
 import org.witofpeach.forest.command.commands.PingCommand;
 
 import javax.annotation.Nullable;
@@ -21,6 +22,7 @@ public class CommandManager {
         addCommand(new PingCommand());
         addCommand(new HelpCommand(this));
         addCommand(new KickCommand());
+        addCommand(new MemeCommand());
     }
 
     private void addCommand(ICommand command) {

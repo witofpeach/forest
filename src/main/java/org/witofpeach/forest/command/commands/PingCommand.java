@@ -5,7 +5,7 @@ import org.witofpeach.forest.command.CommandContext;
 import org.witofpeach.forest.command.ICommand;
 
 public class PingCommand implements ICommand {
-    private String name = "ping";
+    private final String name = "ping";
 
     @Override
     public void handle(CommandContext commandContext) {

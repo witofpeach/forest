@@ -11,7 +11,7 @@ import java.security.PrivilegedExceptionAction;
 import java.util.List;
 
 public class KickCommand implements ICommand {
-    private String name = "kick";
+    private final String name = "kick";
 
     @Override
     public void handle(CommandContext commandContext) {
